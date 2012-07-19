@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.background {
+	background-color: #444;
+}
+.container {
+  margin: auto;
+  width: 960px;
+}
+.page {
+  margin: 10px 0 10px 0;
+}
+.submenu {
+  width: 200px;
+  float: left;
+}
+.content {
+  width: 460px;
+  float: left;
+}
+
+
+.box {
+  background: linear-gradient(left, #fa7f2d, #ff6600, #fa7f2d);
+  padding: 20px;
+  width: 280px;
+  box-shadow: inset 0 1px #fab587, 0 3px 3px #222;
+  border-radius: 3px;
+  margin-bottom: 9px;
+}
+
+.box input {
+  border: 1px solid #96450f;
+  width: 277px;
+  padding: 3px;
+  font-size: 19px;
+  font-family: Helvetica Neue;
+  font-weight: 600;
+  box-shadow: 0 1px #fcb483, inset 0 3px 5px #aaa;
+  border-radius: 3px;
+  color: #666564;
+}
+
+.box input:focus {
+  outline: none;
+  color: #333;
+}
+
+

@@ -1,0 +1,12 @@
+<div class="box">
+	<input class="author" id="<%= "author"+message._id %>" readonly value="<%= message.author%> said:"></input>
+	<div></div>
+	<input class="text" id="<%= "message"+message._id %>" readonly value="<%= message.message %>"></input>
+
+	<% if(message.author == currentUser) { %>
+		<div id="<%= message._id %>">
+			<input class="btn-update badge badge-important" type="submit" value="Update"/>
+			<input class="btn-delete badge badge-important" type="submit" value="Delete"/>
+		</div>
+	<% }  %>
+</div>
