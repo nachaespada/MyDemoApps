@@ -1,0 +1,49 @@
+<div class="movies">
+  <div class="wrapper">
+    <div class="alert alert-info">
+      <h4>{{info.title}}</h4>
+    </div>
+    <div class="image thumbnail">
+      <img src="{{info.moreInfo.image}}"/>
+    </div>
+    <div class="description">
+      {{#info.synopsis}}
+        <h4>Synopsis </h4>{{info.synopsis}}
+      {{/info.synopsis}}
+
+     {{#info.moreInfo.rating}}
+        <h4>Rating: </h4>
+        <div class="progress-wrapper">
+          <div class="progress progress-striped active">
+            <div class="bar" style="width: {{info.moreInfo.rating}}%;">
+              <h5>{{info.moreInfo.rating}}%</h5>
+            </div>
+          </div>
+        </div>
+      {{/info.moreInfo.rating}}
+
+      <h4>Characters: </h4>
+      <ul class="nav nav-list">
+        {{#info.moreInfo.characters}}
+          <li>
+            <i class="icon-user"></i>
+              {{character}}
+          </li>
+        {{/info.moreInfo.characters}}
+      </ul>
+
+      {{#info.moreInfo.mpaa_rating}}
+        <h4>Mpaa rating: </h4>{{info.moreInfo.mpaa_rating}}
+      {{/info.moreInfo.mpaa_rating}}
+
+      {{#info.moreInfo.critics}}
+        <h4>Critics: </h4>{{info.moreInfo.critics}}
+      {{/info.moreInfo.critics}}
+    </div>
+  </div>
+  <div class="pageNav">
+    <a href="#" id="btn-goback">
+      <img src="app/css/images/previous.png"/>
+    </a>
+  </div>
+</div>

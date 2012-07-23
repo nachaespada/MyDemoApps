@@ -1,0 +1,41 @@
+<div class="movies">
+  <div class="alert alert-success">
+    <span class="results">{{total}} movies founded </span>
+  </div>
+    {{#movies}}
+  <div class="wrapper">
+    <div class="alert alert-info">
+        {{{title}}} ({{{genre}}})
+    </div>
+      <div class="image thumbnail">
+      <img src="{{thumbnail}}"/>
+    </div>
+    <div class="description">
+      {{#synopsis}}
+        <div><h4>Synopsis:</h4> {{{synopsis}}}</div>
+      {{/synopsis}}
+      <h4>Actors:</h4>
+      <ul class="nav nav-list">
+        {{#actors}}
+        <li>
+          <i class="icon-user"></i>
+          {{actor}}
+        </li>
+        {{/actors}}
+      </ul>
+    </div>
+    <a id="{{id}}" class="btn btn-primary btn-large btn-more-info">More Info</a>
+  </div>
+  {{/movies}}
+  <div class="pageNav">
+    <h4>{{pageAmount}} pages</h4>
+    <div>
+      <a href="#" id="btn-previous">
+        <img src="app/css/images/previous.png"/>
+      </a>
+      <a href="#" id="btn-next">
+        <img src="app/css/images/next.png"/>
+      </a>
+    </div>
+  </div>
+</div>
