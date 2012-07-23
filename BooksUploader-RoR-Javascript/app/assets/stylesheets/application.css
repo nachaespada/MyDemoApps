@@ -1,0 +1,276 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+body {
+  background-color: #001527;
+  font-family: 'Jockey One', sans-serif;
+  paddinsg:0px;
+  margin:0px;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:left;
+}
+
+.clear {
+  clear:both;
+}
+
+.logo {
+  margin-left:15px;
+  margin-top:17px;
+}
+
+header {
+  width:100%;
+  background: url(/images/menu-bg.png);
+  height:50px;
+  display:block;
+  margin:auto auto;
+  margin-top:10px;
+}
+
+.wrapper {
+  width:960px;
+  margin:auto auto;
+}
+
+header nav ul {
+  padding:0px;
+  margin:0px
+}
+
+header nav li {
+  text-align:center;
+  float:left;
+  list-style:none;
+  display:inline-block;
+  padding:10px;
+  width:120px;
+  background:url(/images/button-bg.png);
+  line-height:30px;
+  height:30px;
+  text-decoration:none;
+  color:#FFF;
+  font-family: 'Jockey One', sans-serif;
+  font-size:15px;
+  cursor:pointer;
+}
+
+header nav li:hover {
+  color:#b4dc17;
+}
+
+header nav li a {
+  text-decoration:none;
+  color:#FFF;
+  font-family: 'Jockey One', sans-serif;
+  font-size:15px;
+}
+
+#quickSearch {
+  float:right;
+  margin-top:10px;
+  margin-right:10px;
+  line-height:30px;
+  height:30px;
+}
+
+#subheader {
+  height:150px;
+  width:100%;
+  background:url(/images/bg_top3_repeat.jpg);
+
+}
+
+#content {
+  width:100%;
+  margin:auto auto;
+  height:850px;
+  padding-top:10px;
+  background-color: #EEE;
+}
+
+.book {
+  padding:10px;
+  text-align:center;
+   width:170px;
+   height:220px;
+   border-radius:6px;
+   color:#222;
+   font-weight:bold;
+}
+
+.books-list li{
+  margin-top:20px;
+  list-style: none;
+  display:block;
+  float:left;
+  margin-left:20px;
+}
+
+.pagination {
+  width:300px;
+  margin:auto auto;
+  margin-top:18px;
+}
+
+footer {
+  width:100%;
+  height:200px;
+}
+
+.libraryTop {
+  width:960px;
+  height:170px;
+  margin: auto;
+  padding: 1px;
+}
+
+
+#magazine {
+  width:500px;
+  margin:auto auto;
+  margin-top:20px;
+}
+
+.drop_zone{
+  position:relative;
+  float:left;
+  margin:5px 10px 10px 10px;
+  height: 127px;
+  width: 180px;
+  background:#999;
+  border: 1px dotted #FFF;
+  border-radius:6px;
+}
+
+
+
+/**********LightBox***********/
+
+/*
+.lb-close{
+  display:block;
+  float:right;
+  font-family:arial;
+  background: rgba(27,54,81,0.8);
+  z-index: 1001;
+  color: #fff;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  text-decoration:none;
+  width: 25px;
+  height: 25px;
+  border-radius:25px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  -webkit-transition: opacity 0.3s linear 1.2s;
+  -moz-transition: opacity 0.3s linear 1.2s;
+  -o-transition: opacity 0.3s linear 1.2s;
+  -ms-transition: opacity 0.3s linear 1.2s;
+  transition: opacity 0.3s linear 1.2s;
+}
+
+.lb-close:hover {
+  background-color: #43c5eb;
+}
+
+.lightbox {
+  width:500px;
+  height:600px;
+  border-radius:6px;
+  position:absolute;
+  top:100px;
+  left:50%;
+  margin-left:-250px;
+  box-shadow:1px 1px 1px 1px #222;
+  background-color:#FFF;
+}
+
+.pressbox {
+  width: 0;
+  height: 0;
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+}
+
+.pressbox .lightbox {
+  opacity: 0;
+  padding: 10px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 15px #444;
+  -moz-box-shadow: 0px 0px 15px #444;
+  box-shadow: 0px 0px 15px #444;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.pressbox:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  }
+
+.pressbox:target a.lb-close {
+  opacity: 1;
+  filter: alpha(opacity=99);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+}
+
+.pressbox:target div {
+  opacity: 1;
+  -webkit-animation: fadeInScale 1s ease-in-out;
+  -moz-animation: fadeInScale 1s ease-in-out;
+  -o-animation: fadeInScale 1s ease-in-out;
+  -ms-animation: fadeInScale 1s ease-in-out;
+  animation: fadeInScale 1s ease-in-out;
+}
+
+@-webkit-keyframes fadeInScale {
+  0% { -webkit-transform: scale(0.6); opacity: 0; }
+  100% { -webkit-transform: scale(1); opacity: 1; }
+}
+@-moz-keyframes fadeInScale {
+  0% { -moz-transform: scale(0.6); opacity: 0; }
+  100% { -moz-transform: scale(1); opacity: 1; }
+}
+@-o-keyframes fadeInScale {
+  0% { -o-transform: scale(0.6); opacity: 0; }
+  100% { -o-transform: scale(1); opacity: 1; }
+}
+@-ms-keyframes fadeInScale {
+  0% { -ms-transform: scale(0.6); opacity: 0; }
+  100% { -ms-transform: scale(1); opacity: 1; }
+}
+@keyframes fadeInScale {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}*/

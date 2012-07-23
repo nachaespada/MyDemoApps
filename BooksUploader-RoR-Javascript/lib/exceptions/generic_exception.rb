@@ -1,0 +1,3 @@
+class GenericException < Exception
+
+end

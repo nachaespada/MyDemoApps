@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @book.description %>
+</p>
+
+<p>
+  <b>Labels:</b>
+  <%= @book.labels %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @book.author %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_book_path(session[:userId], params[:id]) %> |
+<%= link_to 'Download', @book.path %> |
+<%= link_to 'Back', user_books_path(session[:userId])%>

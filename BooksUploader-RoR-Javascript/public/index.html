@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MINE Books</title>
+   <link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+   <style>
+     body {
+      background-color: #001527;
+     }
+
+    #login {
+      background-color: #DDD;
+      width:400px;
+      height:160px;
+      margin:auto auto;
+      margin-top:5px;
+      padding:20px;
+      border-radius:6px;
+      border: 1px solid #333;
+    }
+
+    .title {
+      width:390px;
+      font-size:16px;
+      font-weight:bold;
+      margin:auto auto;
+      margin-top:80px;
+    }
+
+    .login-data {
+      width:250px;
+      margin:auto auto;
+    }
+
+    .custom {
+      display:block;
+      margin:3px;
+    }
+
+    .loginInput{
+      width:230px;
+      margin-left:5px;
+    }
+
+    .buttons {
+      width:200px;
+      margin:auto auto;
+    }
+   </style>
+  </head>
+  <body>
+    <div class="title alert alert-info">
+      Login Area
+    </div>
+    <div id="login" class="well">
+      <div class="login-data">
+        <span class="label custom">Username</span>
+        <input type="text" class="loginInput"/>
+        <span class="label custom">Password</span>
+        <input type="text" class="loginInput"/>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-primary btn-large">Login</button>
+        or
+        <a href="/browse">continue as Guest</a>
+      <div>
+    </div>
+  </body>
+</html>

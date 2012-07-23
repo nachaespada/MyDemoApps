@@ -1,0 +1,74 @@
+<%= form_for([@user,@book], :html => { :multipart => true }, :remote => true ) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="uploadField left">
+    <div class="left">
+      <table>
+        <tr>
+          <td>
+            <%= f.label :title %>
+          </td>
+          <td>
+            <%= f.text_field :title, :class => "input" %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= f.label :description %>
+          </td>
+          <td>
+            <%= f.text_field :description, :class => "input" %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= f.label :labels %>
+          </td>
+          <td>
+            <%= f.text_field :labels, :class => "input" %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= f.label :author %>
+          </td>
+          <td>
+            <%= f.text_field :author, :class => "input" %>
+            <%= f.text_field :id, :type => 'hidden', :class => "input_id", :value => "" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="right">
+
+      <div class="fakeFile">
+          <%= f.file_field :file, :class => 'file_input' %>
+      </div>
+      <div class="actions" id="accept-file">
+        <%= f.submit() %>
+      </div>
+
+    </div>
+    <div id='book'> </div>
+  </div>
+  <div class="drop_zone">
+
+  </div>
+
+  <progress id="progressBar" val="0" max="100"></progress>
+  <span id="progressNumber"></span>
+
+  <script>
+    $('#book').hide();
+  </script>
+<% end %>

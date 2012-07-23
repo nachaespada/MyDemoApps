@@ -1,0 +1,6 @@
+<h1>Editing book</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', [@user, @book] %> |
+<%= link_to 'Back', user_books_path(session[:userId]) %>

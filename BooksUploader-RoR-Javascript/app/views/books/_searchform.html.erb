@@ -1,0 +1,20 @@
+<%#= form_for([@user,@book],:url => {:action =>"filter"}) do |f| %>
+<%= form_for([@user,@book]) do |f| %>
+  <div class="uploadField left">
+    <table>
+      <tr>
+        <td>
+          <%= f.label "Info" %>
+        </td>
+        <td>
+          <%= f.text_field :title, :class => "input" %>
+        </td>
+      </tr>
+    </table>
+    <a href="#" id="search-book" class="btn-primary btn-large"
+      data-load="<%= user_books_path%>">
+      Search
+    </a>
+  </div>
+
+<% end %>

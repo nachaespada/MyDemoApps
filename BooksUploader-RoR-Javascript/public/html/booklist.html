@@ -1,0 +1,23 @@
+<div class="pagination">
+  <ul id="pagination-list">
+    <li><a href="#" id="prevButton">Prev</a></li>
+    <li><a>{{currentPage}} of {{pages}}</a></li>
+    <li><a href="#" id="nextButton">Next</a></li>
+  </ul>
+</div>
+<ul class="books-list">
+  {{#each results}}
+    <li>
+      <div class="book">
+          <div class="book-image">
+            <a href="#" class="thumbnail" id="{{id}}">
+              <label class="label label-info">{{title}}</label>
+              <img src="/images/books/php-book.png" alt="book">
+              <label class="label label-info">{{author}}</label>
+            </a>
+          </div>
+        </div>
+    </li>
+  {{/each}}
+</ul>
+

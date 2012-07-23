@@ -1,0 +1,69 @@
+<header>
+  <div class="logo left">
+    <img src="/images/globant.png" width="100"/>
+  </div>
+  <div class="wrapper">
+    <nav>
+     <ul>
+        <li>
+          <div class="quickButton" id="upload"
+             data-load="<%= new_user_book_path(session[:userId])%>">
+            Upload
+          </div>
+        </li>
+        <li>
+          <div class="quickButton" id="search"
+             data-load="<%= search_user_books_path%>">
+            Search
+          </div>
+        </li>
+        <li>
+          <div class="quickButton" id="profile">
+          Profile
+          </div>
+        </li>
+        <li>
+          <div class="quickButton" id="favorites">
+            Favorites
+          </div>
+        </li>
+        <li></li>
+      </ul>
+    </nav>
+    <div id="quickSearch">
+      <input type="text" class="search-query span2" placeholder="Search">
+    </div>
+  </div>
+</header>
+<section id="subheader">
+  <div class="libraryTop"></div>
+</section>
+<section id="content">
+  <div class="wrapper" id="books-content">
+  </div>
+  <div id='magazine'>
+  </div>
+</section>
+<footer>
+</footer>
+<script type="text/javascript">
+  $(document).ready(function(){
+    QuickMenuManager.init();
+    $('#magazine').hide();
+    BooksCollection.init();
+  });
+</script>
+
+<!--
+<div id="page" class="droppeable">
+
+<div id="books-content">
+</div>
+
+<div id="image1" class="pressbox">
+  <div class="lightbox">
+    <div id="lightbox-content">
+    </div>
+    <a href="#page" class="lb-close">X</a>
+  </div>
+</div>-->
